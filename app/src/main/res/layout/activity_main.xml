@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/fitness2"
+    android:backgroundTintMode="src_over"
+    android:paddingLeft="25dp"
+    android:paddingTop="15dp"
+    android:paddingRight="15dp"
+    android:paddingBottom="15dp">
+
+    <TextView
+        android:id="@+id/txt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:text="To calculate your BMI please  enter your information ..."
+        android:textColor="#5E5858"
+        android:textSize="20dp"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/edtname"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txt"
+        android:layout_alignParentLeft="true"
+        android:hint="name" />
+
+    <EditText
+        android:id="@+id/edtheight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/edtname"
+        android:layout_alignParentLeft="true"
+        android:layout_marginTop="15dp"
+        android:hint="height" />
+
+    <EditText
+        android:id="@+id/edtweight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/edtname"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="15dp"
+        android:layout_toRightOf="@+id/edtheight"
+        android:hint="weight" />
+
+    <Spinner
+        android:id="@+id/spn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txt"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="15dp"
+        android:layout_toRightOf="@+id/edtname"
+        android:entries="@array/Gender"
+        android:textAlignment="center" />
+
+    <Button
+        android:id="@+id/btnBMI"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/edtheight"
+        android:layout_alignParentLeft="true"
+        android:layout_marginTop="15dp"
+        android:onClick="btnBMIOnClick"
+        android:text="Get BMI"
+        android:textStyle="bold|italic" />
+
+    <Button
+        android:id="@+id/btnSave"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btnBMI"
+        android:layout_marginTop="15dp"
+        android:onClick="btnSaveOnClick"
+        android:text="Save"
+        android:textStyle="bold|italic" />
+
+    <Button
+        android:id="@+id/btnTimer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btnSave"
+        android:layout_marginTop="15dp"
+        android:onClick="btnTimerOnClick"
+        android:text="Timer"
+        android:textStyle="bold|italic" />
+
+
+    <TextView
+        android:id="@+id/txtview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btnTimer"
+        android:layout_marginTop="15dp"
+        android:background="#D0FFFFFF"
+        android:textColor="@android:color/background_dark"
+        android:textSize="30dp"
+        android:textStyle="bold|italic" />
+
+
+</RelativeLayout>
